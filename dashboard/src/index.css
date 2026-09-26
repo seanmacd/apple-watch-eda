@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* Activity Rings palette on true black. Mirrors src/theme.ts for use in class names. */
+@theme {
+  --color-move: #fa114f;
+  --color-exercise: #a6ff00;
+  --color-stand: #00d8ff;
+  --color-page: #000000;
+  --color-card: #1c1c1e;
+  --color-raised: #2c2c2e;
+  --color-line: #2c2c2e;
+  --color-ink: #ffffff;
+  --color-ink-2: #aeaeb2;
+  --color-ink-3: #8e8e93;
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html,
+body {
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Recharts draws a focus outline around the whole chart surface on click */
+.recharts-wrapper *:focus {
+  outline: none;
+}

@@ -114,6 +114,13 @@ dashboard/
 6. Polish: tooltips, empty states, responsive stacking, README section
 
 ## 11. Open questions
-- [ ] Confirm the ring meaning (share of the all-time total)
-- [ ] 4th KPI tile: walk count, or average pace?
-- [ ] Should the heart rate vs speed chart appear anywhere? (R² 0.11, a weak relationship)
+Built with these defaults; change any of them if you disagree.
+- [ ] Ring meaning: **built as share of the all-time total**
+- [ ] 4th KPI tile: **built as walk count** (average pace is the alternative)
+- [ ] Heart rate vs speed chart: **left out** (R² 0.11, a weak relationship)
+
+## 12. Build notes
+- **Vite 5**, not Vite 8: Vite 8 needs Node 20.19+ or 22.12+, and this machine has Node 21.7. Upgrade Node to 22 LTS to move to Vite 8.
+- **`npm run lint` fails on Node 21** for the same reason (oxlint has the same Node requirement). It will work after upgrading to Node 22; `npm run build` still type-checks everything in strict mode.
+- **Filters are stored in the URL** (e.g. `?year=2026&season=Summer&day=Sat,Sun`), so views can be bookmarked and shared.
+- **Ring colours** fail the palette validator's "lightness band" check: the neon green and cyan are much brighter than the red. They're kept on purpose to match the Watch, and they pass the colour-blind separation and contrast checks. Every metric is also labelled in text, so colour never carries meaning on its own.

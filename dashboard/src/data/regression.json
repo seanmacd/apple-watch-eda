@@ -1,0 +1,548 @@
+{
+ "calories": {
+  "x": "distance_km",
+  "y": "calories_total",
+  "slope": 99.8975,
+  "intercept": -9.893,
+  "r2": 0.9197
+ },
+ "duration": {
+  "x": "distance_km",
+  "y": "duration",
+  "slope": 13.8966,
+  "intercept": 1.807,
+  "r2": 0.8296
+ },
+ "points": [
+  {
+   "distance_km": 1.703,
+   "calories_total": 122.154,
+   "duration": 23.468
+  },
+  {
+   "distance_km": 3.03,
+   "calories_total": 263.392,
+   "duration": 45.893
+  },
+  {
+   "distance_km": 2.045,
+   "calories_total": 195.95,
+   "duration": 34.728
+  },
+  {
+   "distance_km": 0.874,
+   "calories_total": 64.268,
+   "duration": 10.998
+  },
+  {
+   "distance_km": 1.212,
+   "calories_total": 97.929,
+   "duration": 17.516
+  },
+  {
+   "distance_km": 2.032,
+   "calories_total": 164.694,
+   "duration": 19.368
+  },
+  {
+   "distance_km": 1.687,
+   "calories_total": 156.759,
+   "duration": 26.828
+  },
+  {
+   "distance_km": 1.503,
+   "calories_total": 131.21,
+   "duration": 16.687
+  },
+  {
+   "distance_km": 2.465,
+   "calories_total": 194.978,
+   "duration": 23.772
+  },
+  {
+   "distance_km": 0.627,
+   "calories_total": 91.641,
+   "duration": 13.926
+  },
+  {
+   "distance_km": 7.215,
+   "calories_total": 995.048,
+   "duration": 139.973
+  },
+  {
+   "distance_km": 2.014,
+   "calories_total": 212.788,
+   "duration": 30.295
+  },
+  {
+   "distance_km": 0.652,
+   "calories_total": 79.092,
+   "duration": 13.149
+  },
+  {
+   "distance_km": 0.689,
+   "calories_total": 79.684,
+   "duration": 19.674
+  },
+  {
+   "distance_km": 1.143,
+   "calories_total": 117.475,
+   "duration": 15.762
+  },
+  {
+   "distance_km": 1.235,
+   "calories_total": 102.96,
+   "duration": 17.843
+  },
+  {
+   "distance_km": 1.578,
+   "calories_total": 149.335,
+   "duration": 19.388
+  },
+  {
+   "distance_km": 1.32,
+   "calories_total": 103.904,
+   "duration": 19.314
+  },
+  {
+   "distance_km": 0.961,
+   "calories_total": 69.8,
+   "duration": 10.179
+  },
+  {
+   "distance_km": 1.153,
+   "calories_total": 77.088,
+   "duration": 11.881
+  },
+  {
+   "distance_km": 1.128,
+   "calories_total": 74.707,
+   "duration": 11.959
+  },
+  {
+   "distance_km": 3.523,
+   "calories_total": 303.772,
+   "duration": 59.109
+  },
+  {
+   "distance_km": 1.133,
+   "calories_total": 75.431,
+   "duration": 15.029
+  },
+  {
+   "distance_km": 2.794,
+   "calories_total": 225.303,
+   "duration": 39.288
+  },
+  {
+   "distance_km": 2.185,
+   "calories_total": 170.008,
+   "duration": 29.09
+  },
+  {
+   "distance_km": 2.025,
+   "calories_total": 154.703,
+   "duration": 31.617
+  },
+  {
+   "distance_km": 3.021,
+   "calories_total": 233.145,
+   "duration": 44.603
+  },
+  {
+   "distance_km": 2.495,
+   "calories_total": 209.034,
+   "duration": 35.923
+  },
+  {
+   "distance_km": 8.308,
+   "calories_total": 713.181,
+   "duration": 133.339
+  },
+  {
+   "distance_km": 2.819,
+   "calories_total": 208.966,
+   "duration": 47.382
+  },
+  {
+   "distance_km": 4.368,
+   "calories_total": 413.157,
+   "duration": 81.673
+  },
+  {
+   "distance_km": 2.142,
+   "calories_total": 220.936,
+   "duration": 44.005
+  },
+  {
+   "distance_km": 1.891,
+   "calories_total": 161.87,
+   "duration": 22.304
+  },
+  {
+   "distance_km": 1.755,
+   "calories_total": 150.379,
+   "duration": 22.47
+  },
+  {
+   "distance_km": 1.735,
+   "calories_total": 138.143,
+   "duration": 24.758
+  },
+  {
+   "distance_km": 2.088,
+   "calories_total": 242.955,
+   "duration": 54.369
+  },
+  {
+   "distance_km": 0.699,
+   "calories_total": 87.823,
+   "duration": 15.163
+  },
+  {
+   "distance_km": 2.09,
+   "calories_total": 184.542,
+   "duration": 33.831
+  },
+  {
+   "distance_km": 1.986,
+   "calories_total": 178.907,
+   "duration": 31.485
+  },
+  {
+   "distance_km": 2.602,
+   "calories_total": 249.577,
+   "duration": 41.603
+  },
+  {
+   "distance_km": 2.095,
+   "calories_total": 232.796,
+   "duration": 40.692
+  },
+  {
+   "distance_km": 1.85,
+   "calories_total": 178.116,
+   "duration": 25.269
+  },
+  {
+   "distance_km": 3.965,
+   "calories_total": 409.164,
+   "duration": 65.112
+  },
+  {
+   "distance_km": 1.314,
+   "calories_total": 96.977,
+   "duration": 14.666
+  },
+  {
+   "distance_km": 1.788,
+   "calories_total": 146.7,
+   "duration": 21.469
+  },
+  {
+   "distance_km": 2.296,
+   "calories_total": 241.59,
+   "duration": 40.483
+  },
+  {
+   "distance_km": 1.452,
+   "calories_total": 126.03,
+   "duration": 19.586
+  },
+  {
+   "distance_km": 8.717,
+   "calories_total": 797.447,
+   "duration": 102.167
+  },
+  {
+   "distance_km": 5.257,
+   "calories_total": 503.828,
+   "duration": 68.907
+  },
+  {
+   "distance_km": 11.586,
+   "calories_total": 1035.892,
+   "duration": 132.073
+  },
+  {
+   "distance_km": 4.71,
+   "calories_total": 455.27,
+   "duration": 64.128
+  },
+  {
+   "distance_km": 1.687,
+   "calories_total": 150.348,
+   "duration": 24.779
+  },
+  {
+   "distance_km": 1.552,
+   "calories_total": 186.354,
+   "duration": 20.856
+  },
+  {
+   "distance_km": 2.599,
+   "calories_total": 234.044,
+   "duration": 32.515
+  },
+  {
+   "distance_km": 3.84,
+   "calories_total": 337.134,
+   "duration": 55.095
+  },
+  {
+   "distance_km": 1.564,
+   "calories_total": 160.136,
+   "duration": 28.137
+  },
+  {
+   "distance_km": 5.166,
+   "calories_total": 512.61,
+   "duration": 65.567
+  },
+  {
+   "distance_km": 1.949,
+   "calories_total": 146.395,
+   "duration": 25.691
+  },
+  {
+   "distance_km": 1.492,
+   "calories_total": 136.58,
+   "duration": 23.696
+  },
+  {
+   "distance_km": 5.19,
+   "calories_total": 502.272,
+   "duration": 76.77
+  },
+  {
+   "distance_km": 1.526,
+   "calories_total": 129.033,
+   "duration": 16.779
+  },
+  {
+   "distance_km": 1.992,
+   "calories_total": 181.212,
+   "duration": 22.713
+  },
+  {
+   "distance_km": 1.391,
+   "calories_total": 116.554,
+   "duration": 17.284
+  },
+  {
+   "distance_km": 4.954,
+   "calories_total": 452.652,
+   "duration": 69.763
+  },
+  {
+   "distance_km": 3.549,
+   "calories_total": 501.164,
+   "duration": 86.429
+  },
+  {
+   "distance_km": 5.17,
+   "calories_total": 461.601,
+   "duration": 58.928
+  },
+  {
+   "distance_km": 2.604,
+   "calories_total": 220.051,
+   "duration": 30.757
+  },
+  {
+   "distance_km": 3.859,
+   "calories_total": 318.747,
+   "duration": 42.994
+  },
+  {
+   "distance_km": 3.736,
+   "calories_total": 366.18,
+   "duration": 49.62
+  },
+  {
+   "distance_km": 1.974,
+   "calories_total": 188.81,
+   "duration": 22.041
+  },
+  {
+   "distance_km": 1.253,
+   "calories_total": 105.753,
+   "duration": 17.046
+  },
+  {
+   "distance_km": 0.826,
+   "calories_total": 178.839,
+   "duration": 15.161
+  },
+  {
+   "distance_km": 2.492,
+   "calories_total": 243.048,
+   "duration": 32.274
+  },
+  {
+   "distance_km": 1.644,
+   "calories_total": 149.858,
+   "duration": 28.812
+  },
+  {
+   "distance_km": 2.248,
+   "calories_total": 217.876,
+   "duration": 38.292
+  },
+  {
+   "distance_km": 3.512,
+   "calories_total": 316.483,
+   "duration": 40.061
+  },
+  {
+   "distance_km": 2.356,
+   "calories_total": 194.416,
+   "duration": 33.882
+  },
+  {
+   "distance_km": 1.514,
+   "calories_total": 119.055,
+   "duration": 20.225
+  },
+  {
+   "distance_km": 5.061,
+   "calories_total": 456.762,
+   "duration": 50.885
+  },
+  {
+   "distance_km": 2.344,
+   "calories_total": 215.891,
+   "duration": 34.057
+  },
+  {
+   "distance_km": 1.382,
+   "calories_total": 120.489,
+   "duration": 19.751
+  },
+  {
+   "distance_km": 4.124,
+   "calories_total": 411.49,
+   "duration": 46.834
+  },
+  {
+   "distance_km": 2.328,
+   "calories_total": 204.843,
+   "duration": 31.301
+  },
+  {
+   "distance_km": 4.678,
+   "calories_total": 457.277,
+   "duration": 55.053
+  },
+  {
+   "distance_km": 4.664,
+   "calories_total": 435.408,
+   "duration": 49.993
+  },
+  {
+   "distance_km": 1.908,
+   "calories_total": 284.913,
+   "duration": 30.627
+  },
+  {
+   "distance_km": 4.465,
+   "calories_total": 594.365,
+   "duration": 54.326
+  },
+  {
+   "distance_km": 1.384,
+   "calories_total": 124.831,
+   "duration": 14.895
+  },
+  {
+   "distance_km": 3.891,
+   "calories_total": 342.985,
+   "duration": 40.488
+  },
+  {
+   "distance_km": 3.889,
+   "calories_total": 339.143,
+   "duration": 41.093
+  },
+  {
+   "distance_km": 1.373,
+   "calories_total": 163.471,
+   "duration": 16.003
+  },
+  {
+   "distance_km": 1.964,
+   "calories_total": 180.368,
+   "duration": 21.732
+  },
+  {
+   "distance_km": 3.057,
+   "calories_total": 324.528,
+   "duration": 51.079
+  },
+  {
+   "distance_km": 3.576,
+   "calories_total": 414.741,
+   "duration": 79.864
+  },
+  {
+   "distance_km": 1.278,
+   "calories_total": 147.658,
+   "duration": 25.907
+  },
+  {
+   "distance_km": 2.073,
+   "calories_total": 293.102,
+   "duration": 46.635
+  },
+  {
+   "distance_km": 2.795,
+   "calories_total": 276.019,
+   "duration": 41.832
+  },
+  {
+   "distance_km": 4.856,
+   "calories_total": 481.874,
+   "duration": 62.75
+  },
+  {
+   "distance_km": 1.68,
+   "calories_total": 177.564,
+   "duration": 29.034
+  },
+  {
+   "distance_km": 1.466,
+   "calories_total": 142.276,
+   "duration": 20.746
+  },
+  {
+   "distance_km": 4.6,
+   "calories_total": 419.025,
+   "duration": 64.734
+  },
+  {
+   "distance_km": 7.085,
+   "calories_total": 914.83,
+   "duration": 151.492
+  },
+  {
+   "distance_km": 3.387,
+   "calories_total": 369.383,
+   "duration": 77.409
+  },
+  {
+   "distance_km": 1.726,
+   "calories_total": 158.178,
+   "duration": 25.067
+  },
+  {
+   "distance_km": 2.012,
+   "calories_total": 117.17,
+   "duration": 21.507
+  },
+  {
+   "distance_km": 4.908,
+   "calories_total": 490.43,
+   "duration": 83.771
+  }
+ ]
+}
