@@ -67,8 +67,9 @@ function Headline() {
 function Dashboard() {
   return (
     <div className="min-h-screen bg-page">
-      <header className="sticky top-0 z-20 border-b border-line bg-page/85 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-[1440px] flex-col gap-4 px-4 py-4 sm:px-6 lg:px-8">
+      {/* Only sticky on wide screens; on phones the filters would cover too much of the page */}
+      <header className="z-20 border-b border-line bg-page/85 backdrop-blur-xl lg:sticky lg:top-0">
+        <div className="mx-auto flex max-w-[1440px] flex-col gap-5 px-4 py-5 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-baseline justify-between gap-2">
             <h1 className="text-2xl font-bold tracking-tight text-ink">Walking Dashboard</h1>
             <p className="text-[13px] text-ink-3">
