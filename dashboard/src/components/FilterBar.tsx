@@ -3,7 +3,8 @@ import { WALKS, YEARS } from '../data'
 import { activeFilterCount } from '../lib/filter'
 import { useFilters } from '../state/FiltersContext'
 import { DAYS, SEASONS, TIMES, WEEKDAYS, WEEKENDS, type Day, type Filters } from '../types'
-import { Checkbox, ControlGroup, ControlRow, Radio } from './FormControls'
+import { Dropdown } from './Dropdown'
+import { Checkbox, ControlList, Radio } from './FormControls'
 
 type DayMode = 'all' | 'weekdays' | 'weekends' | 'custom'
 
@@ -23,6 +24,13 @@ function presetMode(days: Day[]): DayMode | null {
   return null
 }
 
+/** "All", a short list, or "3 selected", in the category's own order */
+function summary(selected: readonly unknown[], order: readonly unknown[]): string {
+  if (selected.length === 0) return 'All'
+  const sorted = order.filter((v) => selected.includes(v))
+  return sorted.length <= 2 ? sorted.join(', ') : `${sorted.length} selected`
+}
+
 export function FilterBar() {
   const { filters, dispatch, walks } = useFilters()
   const active = activeFilterCount(filters)
@@ -35,8 +43,15 @@ export function FilterBar() {
     dispatch({ type: 'reset' })
   }
 
+  const chooseDayMode = (mode: DayMode) => {
+    setCustom(mode === 'custom')
+    if (mode === 'all') dispatch({ type: 'set', group: 'days', values: [] })
+    if (mode === 'weekdays') dispatch({ type: 'set', group: 'days', values: WEEKDAYS })
+    if (mode === 'weekends') dispatch({ type: 'set', group: 'days', values: WEEKENDS })
+  }
+
   const checkboxes = <G extends keyof Filters>(group: G, values: readonly Filters[G][number][]) => (
-    <ControlRow>
+    <ControlList>
       {values.map((value) => (
         <Checkbox
           key={String(value)}
@@ -45,23 +60,34 @@ export function FilterBar() {
           onChange={() => dispatch({ type: 'toggle', group, value })}
         />
       ))}
-    </ControlRow>
+    </ControlList>
   )
 
-  const chooseDayMode = (mode: DayMode) => {
-    setCustom(mode === 'custom')
-    if (mode === 'all') dispatch({ type: 'set', group: 'days', values: [] })
-    if (mode === 'weekdays') dispatch({ type: 'set', group: 'days', values: WEEKDAYS })
-    if (mode === 'weekends') dispatch({ type: 'set', group: 'days', values: WEEKENDS })
-  }
+  const category = <G extends keyof Filters>(label: string, group: G, values: readonly Filters[G][number][]) => (
+    <Dropdown
+      label={label}
+      value={summary(filters[group], values)}
+      active={filters[group].length > 0}
+      onClear={() => dispatch({ type: 'set', group, values: [] })}
+    >
+      {checkboxes(group, values)}
+    </Dropdown>
+  )
+
+  const dayValue =
+    dayMode === 'custom' ? summary(filters.days, DAYS) : DAY_MODES.find((m) => m.mode === dayMode)!.label
 
   return (
-    <div className="flex flex-wrap gap-x-12 gap-y-5">
-      <ControlGroup label="Year">{checkboxes('years', YEARS)}</ControlGroup>
-      <ControlGroup label="Season">{checkboxes('seasons', SEASONS)}</ControlGroup>
-      <ControlGroup label="Time of day">{checkboxes('times', TIMES)}</ControlGroup>
-      <ControlGroup label="Day of week">
-        <ControlRow>
+    <div className="flex flex-wrap items-center gap-2">
+      {category('Year', 'years', YEARS)}
+      {category('Season', 'seasons', SEASONS)}
+      <Dropdown
+        label="Day of week"
+        value={dayValue}
+        active={filters.days.length > 0}
+        onClear={() => chooseDayMode('all')}
+      >
+        <ControlList>
           {DAY_MODES.map(({ mode, label }) => (
             <Radio
               key={mode}
@@ -71,13 +97,14 @@ export function FilterBar() {
               onChange={() => chooseDayMode(mode)}
             />
           ))}
-        </ControlRow>
+        </ControlList>
         {dayMode === 'custom' && (
-          <div className="border-l border-line pl-4">{checkboxes('days', DAYS)}</div>
+          <div className="mt-3 border-t border-line pt-3">{checkboxes('days', DAYS)}</div>
         )}
-      </ControlGroup>
+      </Dropdown>
+      {category('Time of day', 'times', TIMES)}
 
-      <div className="ml-auto flex items-end gap-4 self-end text-[13px] text-ink-3">
+      <div className="ml-auto flex items-center gap-4 text-[13px] text-ink-3">
         <span className="tabular-nums">
           Showing <span className="font-semibold text-ink">{walks.length}</span> of {WALKS.length} walks
         </span>
@@ -85,7 +112,7 @@ export function FilterBar() {
           type="button"
           onClick={reset}
           disabled={active === 0 && !custom}
-          className="h-8 rounded-md border border-line px-3 font-medium text-ink-2 transition-colors hover:text-ink disabled:opacity-40 disabled:hover:text-ink-2"
+          className="h-9 rounded-lg border border-line px-3 font-medium text-ink-2 transition-colors hover:text-ink disabled:opacity-40 disabled:hover:text-ink-2"
         >
           Reset{active > 0 && ` (${active})`}
         </button>

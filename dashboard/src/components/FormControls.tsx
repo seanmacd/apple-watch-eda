@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 
-// Look-alikes of Mantine's Checkbox, Radio and Checkbox.Group / Radio.Group, styled for the dark theme.
+// Look-alikes of Mantine's Checkbox and Radio, styled for the dark theme.
 // Real <input>s underneath so keyboard, focus and screen readers work as normal.
 
 const BOX =
@@ -58,16 +58,7 @@ export function Radio({ label, name, checked, onChange }: ControlProps & { name:
   )
 }
 
-/** Mantine-style group: small label above a wrapping row of controls */
-export function ControlGroup({ label, children }: { label: string; children: ReactNode }) {
-  return (
-    <fieldset className="flex min-w-0 flex-col gap-2.5">
-      <legend className="mb-2.5 text-[11px] font-semibold tracking-wider text-ink-3 uppercase">{label}</legend>
-      {children}
-    </fieldset>
-  )
-}
-
-export function ControlRow({ children }: { children: ReactNode }) {
-  return <div className="flex flex-wrap gap-x-5 gap-y-2.5">{children}</div>
+/** Vertical stack of checkbox / radio items, as in a Mantine Checkbox.Group */
+export function ControlList({ children }: { children: ReactNode }) {
+  return <div className="flex flex-col gap-3">{children}</div>
 }
